@@ -17,6 +17,9 @@ class TestTemplate(BaseTestCase):
         filename = 'test/fixtures/templates/good/generic.yaml'
         template = self.load_template(filename)
         self.template = Template(filename, template)
+        transform_filename = 'test/fixtures/templates/good/transform.yaml'
+        transform_template = self.load_template(filename)
+        self.transform_template = Template(transform_filename, transform_template)
         self.resource_names = [
             'IamPipeline',
             'RootInstanceProfile',
